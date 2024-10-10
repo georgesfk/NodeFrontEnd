@@ -1,0 +1,114 @@
+:root {
+  --font-color-dark: rgba(255, 255, 255, 0.87);
+  --background-color-dark: #242424;
+  --font-color-light: #213547;
+  --background-color-light: #ffffff;
+  --primary-color: #4a90e2; /* Nice primary blue for buttons and links */
+  --primary-hover-color: #357ABD; /* Darker blue for hover states */
+  --button-bg-color-dark: #333;
+  --button-bg-color-light: #f9f9f9;
+  --button-border-color-dark: transparent;
+  --button-border-color-light: transparent;
+
+  /* Fonts */
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  
+  /* Smoothing */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-hover-color);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--background-color-dark);
+  color: var(--font-color-dark);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+p {
+  font-size: 1.25em;
+  margin-top: 0;
+}
+
+button {
+  border-radius: 12px;
+  border: 1px solid var(--button-border-color-dark);
+  padding: 0.8em 1.5em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: var(--button-bg-color-dark);
+  color: var(--font-color-dark);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: var(--background-color-light);
+    color: var(--font-color-light);
+  }
+
+  body {
+    background-color: var(--background-color-light);
+    color: var(--font-color-light);
+  }
+
+  h1 {
+    color: var(--font-color-light);
+  }
+
+  a:hover {
+    color: var(--primary-hover-color);
+  }
+
+  button {
+    background-color: var(--button-bg-color-light);
+    border-color: var(--button-border-color-light);
+    color: var(--font-color-light);
+  }
+
+  button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+}
